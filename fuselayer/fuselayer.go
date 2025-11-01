@@ -16,13 +16,13 @@
 package fuselayer
 
 import (
-	"github.com/negrel/slowfs/scheduler"
-	"github.com/negrel/slowfs/units"
 	"time"
 
 	"github.com/hanwen/go-fuse/fuse"
 	"github.com/hanwen/go-fuse/fuse/nodefs"
 	"github.com/hanwen/go-fuse/fuse/pathfs"
+	"github.com/negrel/slowfs/scheduler"
+	"github.com/negrel/slowfs/units"
 )
 
 type slowFile struct {

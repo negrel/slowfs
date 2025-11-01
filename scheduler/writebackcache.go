@@ -15,9 +15,9 @@
 package scheduler
 
 import (
-	"math/rand"
 	"github.com/negrel/slowfs"
 	"github.com/negrel/slowfs/units"
+	"math/rand"
 	"time"
 )
 

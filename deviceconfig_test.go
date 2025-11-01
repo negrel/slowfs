@@ -17,8 +17,8 @@ package slowfs
 import (
 	"errors"
 	"fmt"
-	"reflect"
 	"github.com/negrel/slowfs/units"
+	"reflect"
 	"testing"
 	"time"
 )

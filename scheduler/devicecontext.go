@@ -15,10 +15,10 @@
 package scheduler
 
 import (
-	"log"
-	"os"
 	"github.com/negrel/slowfs"
 	"github.com/negrel/slowfs/units"
+	"log"
+	"os"
 	"time"
 )
 

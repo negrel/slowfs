@@ -15,8 +15,8 @@
 package scheduler
 
 import (
-	"math"
 	"github.com/negrel/slowfs/units"
+	"math"
 	"time"
 )
 

@@ -18,8 +18,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"log"
 	"github.com/negrel/slowfs/units"
+	"log"
 	"strings"
 	"time"
 )
