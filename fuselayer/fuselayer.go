@@ -16,8 +16,8 @@
 package fuselayer
 
 import (
-	"slowfs/slowfs/scheduler"
-	"slowfs/slowfs/units"
+	"github.com/negrel/slowfs/scheduler"
+	"github.com/negrel/slowfs/units"
 	"time"
 
 	"github.com/hanwen/go-fuse/fuse"

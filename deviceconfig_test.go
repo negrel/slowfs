@@ -18,7 +18,7 @@ import (
 	"errors"
 	"fmt"
 	"reflect"
-	"slowfs/slowfs/units"
+	"github.com/negrel/slowfs/units"
 	"testing"
 	"time"
 )

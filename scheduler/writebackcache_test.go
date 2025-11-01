@@ -16,8 +16,8 @@ package scheduler
 
 import (
 	"reflect"
-	"slowfs/slowfs"
-	"slowfs/slowfs/units"
+	"github.com/negrel/slowfs"
+	"github.com/negrel/slowfs/units"
 	"sort"
 	"testing"
 	"time"

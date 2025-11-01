@@ -16,8 +16,8 @@ package scheduler
 
 import (
 	"math/rand"
-	"slowfs/slowfs"
-	"slowfs/slowfs/units"
+	"github.com/negrel/slowfs"
+	"github.com/negrel/slowfs/units"
 	"time"
 )
 

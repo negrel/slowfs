@@ -19,7 +19,7 @@ import (
 	"errors"
 	"fmt"
 	"log"
-	"slowfs/slowfs/units"
+	"github.com/negrel/slowfs/units"
 	"strings"
 	"time"
 )
