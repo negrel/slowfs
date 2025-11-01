@@ -19,12 +19,16 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
+	"os/exec"
+	"os/signal"
 	"path/filepath"
+	"time"
+
 	"github.com/negrel/slowfs"
 	"github.com/negrel/slowfs/fuselayer"
 	"github.com/negrel/slowfs/scheduler"
 	"github.com/negrel/slowfs/units"
-	"time"
 
 	"github.com/hanwen/go-fuse/fuse/nodefs"
 	"github.com/hanwen/go-fuse/fuse/pathfs"
@@ -188,6 +192,25 @@ func main() {
 	if err != nil {
 		log.Fatalf("%v", err)
 	}
+
+	ch := make(chan os.Signal, 16)
+	signal.Notify(ch, os.Interrupt)
+	go func() {
+		sig := <-ch
+		log.Println("signal", sig, "received, exiting...")
+
+		err = server.Unmount()
+		if err != nil {
+			cmd := exec.Command("umount", *mountDir)
+			err = cmd.Start()
+			if err == nil {
+				err = cmd.Wait()
+			}
+		}
+		if err != nil {
+			log.Fatal("failed to unmount fusefs:", err)
+		}
+	}()
 
 	server.Serve()
 }
